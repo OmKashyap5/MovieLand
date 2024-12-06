@@ -1,0 +1,155 @@
+/* MovieDetails.css */
+.parent{
+    width: 100vw; /* Full screen width */
+    height: 100vh; /* Full screen height */
+}
+.movie-details {
+    position: relative; /* For positioning the overlay */
+    display: flex;
+    flex-wrap: wrap; /* Wrap content for responsiveness */
+    background-size: cover; /* Background image spans entire screen */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #000; /* Fallback background color */
+    color: #fff;
+    width: 100vw; /* Full screen width */
+    height: 100vh; /* Full screen height */
+    padding: 20px;
+    box-sizing: border-box; /*Includes padding in total width/height
+    overflow: hidden; /* Prevents scrolling issues */
+}
+
+/* Add a semi-transparent overlay */
+.movie-details::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Black overlay with 60% transparency */
+    z-index: 1; /* Ensure it stays behind text */
+}
+
+.poster-container img {
+max-width: 100%;
+max-height: 600px;
+border-radius: 15px;
+margin: 20px;
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.details-container {
+color: #fff;
+flex: 1;
+margin: 20px;
+padding: 20px;
+border-radius: 10px;
+background: rgba(0, 0, 0, 0.8); /* Semi-transparent background for text box */
+font-family: 'Arial', sans-serif;
+}
+
+.details-container h1 {
+font-size: 2.5rem;
+margin-bottom: 20px;
+color:#fff;
+}
+
+.details-container p {
+margin: 5px 0;
+line-height: 1.6;
+text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.details-container span {
+font-weight: bold;
+}
+
+.action-buttons {
+margin-top: 20px;
+}
+
+.action-buttons button {
+padding: 10px 20px;
+font-size: 1rem;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+margin-right: 10px;
+transition: transform 0.3s ease;
+}
+
+.action-buttons button:hover {
+transform: scale(1.05);
+}
+
+.watch-now {
+background: #e50914;
+color: white;
+}
+
+.watch-trailer {
+background: transparent;
+color: white;
+border: 2px solid white;
+}
+.similar {
+    width: 100vw; /* Full screen width */
+    height: 100vh; /* Full screen height */
+    background-color: #0000009f;
+}
+  
+  /* Responsive Design */
+  
+  /* For tablets and smaller screens (max-width: 768px) */
+  @media (max-width: 768px) {
+    .movie-details {
+      flex-direction: column; /* Stack content vertically */
+      text-align: center;
+      height: auto; /* Allow scrolling for smaller screens */
+    }
+  
+    .movie-details img {
+      margin: 0 auto; /* Center the poster */
+      max-width: 80%; /* Adjust poster size */
+    }
+  
+    .movie-details div {
+      padding: 10px;
+    }
+  
+    .movie-details h1 {
+      font-size: 2rem;
+    }
+  
+    .movie-details p {
+      font-size: 1rem;
+    }
+  
+    .movie-details button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+  }
+  
+  /* For mobile screens (max-width: 480px) */
+  @media (max-width: 480px) {
+    .movie-details img {
+      max-width: 100%;
+    }
+  
+    .movie-details h1 {
+      font-size: 1.8rem;
+    }
+  
+    .movie-details p {
+      font-size: 0.9rem;
+    }
+  
+    .movie-details button {
+      width: 100%; /* Buttons take full width */
+      margin: 5px 0;
+    }
+  }
+  

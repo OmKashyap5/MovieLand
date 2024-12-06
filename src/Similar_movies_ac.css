@@ -1,0 +1,46 @@
+.similar-movies {
+    margin-top: 2rem;
+  }
+  
+  .similar-movies h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: aliceblue;
+    padding-left: 2rem;
+  }
+  
+  .movies-scroll {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+    padding-left: 2rem; /* Add padding to the left side */
+    scroll-behavior: smooth; /* Smooth scrolling */
+  }
+  
+  /* Hide the scrollbar */
+  .movies-scroll::-webkit-scrollbar {
+    display: none; /* For Webkit browsers (Chrome, Safari) */
+  }
+  
+  .movies-scroll {
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+    scrollbar-width: none; /* For Firefox */
+  }
+  
+  .movie-card {
+    flex: 0 0 auto;
+    width: 150px;
+    text-align: center;
+  }
+  
+  .movie-card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .movie-card p {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+  
