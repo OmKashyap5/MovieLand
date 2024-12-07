@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Similar_movies_g.css";
 
-const API_URL = "http://www.omdbapi.com?apikey=7ba64470";
+const API_URL = "http://www.omdbapi.com?apikey=<enter _your_api_key>";
 
 const SimilarMovies = ({ genre }) => {
   const [similarMovies, setSimilarMovies] = useState([]);
@@ -33,25 +33,6 @@ const SimilarMovies = ({ genre }) => {
       });
 
       await Promise.all(promises);
-  // const fetchSimilarMovies = async () => {
-  //   try {
-  //     const genres = genre.split(","); // Split genres into an array
-  //     const promises = genres.map(async (g) => {
-  //       const response = await fetch(`${API_URL}&s=${g.trim()}&type=movie`);
-  //       return response.json();
-  //     });
-  //     const results = await Promise.all(promises);
-  
-  //     const uniqueMovies = [];
-  //     results.forEach((result) => {
-  //       if (result.Search) {
-  //         result.Search.forEach((movie) => {
-  //           if (!uniqueMovies.find((m) => m.imdbID === movie.imdbID)) {
-  //             uniqueMovies.push(movie); // Add only unique movies
-  //           }
-  //         });
-  //       }
-  //     });
   
       setSimilarMovies(uniqueMovies);
     } catch (error) {
