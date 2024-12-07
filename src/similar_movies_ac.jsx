@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Similar_movies_ac.css";
 
-const API_URL = "http://www.omdbapi.com?apikey=7ba64470";
+const API_URL = "http://www.omdbapi.com?apikey=<enter _your_api_key>";
 
 const SimilarMovies1 = ({ actor }) => {
   const [similarMovies, setSimilarMovies1] = useState([]);
