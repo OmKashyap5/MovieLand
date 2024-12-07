@@ -39,7 +39,6 @@ const SimilarMovies1 = ({ actor }) => {
 
   return (
     <div className="similar-movies">
-      <h2>Similar Movies based on Actors</h2>
       <div className="movies-scroll">
         {similarMovies.map((movie) => (
           <div className="movie-card" key={movie.imdbID}>

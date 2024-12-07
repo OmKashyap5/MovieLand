@@ -6,26 +6,52 @@ const API_URL = "http://www.omdbapi.com?apikey=7ba64470";
 
 const SimilarMovies = ({ genre }) => {
   const [similarMovies, setSimilarMovies] = useState([]);
-
   const fetchSimilarMovies = async () => {
     try {
       const genres = genre.split(","); // Split genres into an array
+      const uniqueMovies = []; // To store unique movies
       const promises = genres.map(async (g) => {
-        const response = await fetch(`${API_URL}&s=${g.trim()}&type=movie`);
-        return response.json();
-      });
-      const results = await Promise.all(promises);
-  
-      const uniqueMovies = [];
-      results.forEach((result) => {
-        if (result.Search) {
-          result.Search.forEach((movie) => {
-            if (!uniqueMovies.find((m) => m.imdbID === movie.imdbID)) {
-              uniqueMovies.push(movie); // Add only unique movies
-            }
-          });
+        let page = 1; // Start from page 1
+        let morePages = true; // Flag for pagination
+
+        while (page < 3 && morePages) {
+          const response = await fetch(`${API_URL}&s=${g.trim()}&type=movie&page=${page}`);
+          const result = await response.json();
+
+          if (result.Search) {
+            result.Search.forEach((movie) => {
+              // Add only unique movies
+              if (!uniqueMovies.find((m) => m.imdbID === movie.imdbID)) {
+                uniqueMovies.push(movie);
+              }
+            });
+            page++;
+          } else {
+            morePages = false; // Stop if no results
+          }
         }
       });
+
+      await Promise.all(promises);
+  // const fetchSimilarMovies = async () => {
+  //   try {
+  //     const genres = genre.split(","); // Split genres into an array
+  //     const promises = genres.map(async (g) => {
+  //       const response = await fetch(`${API_URL}&s=${g.trim()}&type=movie`);
+  //       return response.json();
+  //     });
+  //     const results = await Promise.all(promises);
+  
+  //     const uniqueMovies = [];
+  //     results.forEach((result) => {
+  //       if (result.Search) {
+  //         result.Search.forEach((movie) => {
+  //           if (!uniqueMovies.find((m) => m.imdbID === movie.imdbID)) {
+  //             uniqueMovies.push(movie); // Add only unique movies
+  //           }
+  //         });
+  //       }
+  //     });
   
       setSimilarMovies(uniqueMovies);
     } catch (error) {
@@ -39,7 +65,6 @@ const SimilarMovies = ({ genre }) => {
 
   return (
     <div className="similar-movies">
-      <h2>Similar Movies based on Genre</h2>
       <div className="movies-scroll">
         {similarMovies.map((movie) => (
           <div className="movie-card" key={movie.imdbID}>

@@ -2,6 +2,8 @@
 .parent{
     width: 100vw; /* Full screen width */
     height: 100vh; /* Full screen height */
+    display: flex;
+    flex-direction: column;
 }
 .movie-details {
     position: relative; /* For positioning the overlay */
@@ -55,6 +57,13 @@ margin-bottom: 20px;
 color:#fff;
 }
 
+.similar h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: aliceblue;
+  padding-left: 2rem;
+}
+
 .details-container p {
 margin: 5px 0;
 line-height: 1.6;
@@ -97,6 +106,9 @@ border: 2px solid white;
     width: 100vw; /* Full screen width */
     height: 100vh; /* Full screen height */
     background-color: #0000009f;
+}
+.similar h2 {
+  color:#ff5722;
 }
   
   /* Responsive Design */

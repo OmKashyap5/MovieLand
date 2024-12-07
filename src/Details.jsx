@@ -191,7 +191,9 @@ const MovieDetails = () => {
         </div>
       </div>
       <div className="similar">
+      <h2>Similar Movies based on Genre</h2>
         <SimilarMovies genre={movie.Genre} />
+        <h2>Similar Movies based on Actors</h2>
         <SimilarMovies1 actor={movie.Actors} />
       </div>
     </div>
