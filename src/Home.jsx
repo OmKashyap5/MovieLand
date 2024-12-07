@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./HomePage.css";
 import SimilarMovies from "./similar_movies_g";
 
-const API_URL = "http://www.omdbapi.com?apikey=7ba64470";
+const API_URL = "http://www.omdbapi.com?apikey=<enter _your_api_key>";
 
 const HomePage = () => {
   const [movies, setMovies] = useState([]);
