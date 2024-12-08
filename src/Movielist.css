@@ -1,6 +1,7 @@
 .movie-list {
     text-align: center;
     padding: 2rem;
+    overflow-x:hidden;
   }
   
   h1 {
