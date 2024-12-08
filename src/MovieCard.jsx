@@ -1,6 +1,7 @@
 import React from 'react';
 import Details from "./Details"
 import {useState} from 'react';
+
 import { useNavigate } from "react-router-dom";
 
 const MovieCard = ({ movie: { imdbID, Year, Poster, Title, Type } }) => {
@@ -9,7 +10,6 @@ const MovieCard = ({ movie: { imdbID, Year, Poster, Title, Type } }) => {
   return (
     <div className="movie" key={imdbID}>
       <div>
-        <p>{Year}</p>
       </div>
       <div>
         <img
@@ -17,10 +17,6 @@ const MovieCard = ({ movie: { imdbID, Year, Poster, Title, Type } }) => {
           alt={Title}
           onClick={() => navigate(`/movie/${imdbID}`)} // Navigate to the details page
         />
-      </div>
-      <div>
-        <span>{Type}</span>
-        <h3>{Title}</h3>
       </div>
     </div>
   );
