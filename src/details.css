@@ -1,7 +1,6 @@
 /* MovieDetails.css */
 .parent{
-    width: 100vw; /* Full screen width */
-    height: 100vh; /* Full screen height */
+    overflow-x:hidden;
     display: flex;
     flex-direction: column;
 }
