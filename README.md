@@ -39,9 +39,9 @@ You can get the API key used here by visiting (https://www.omdbapi.com/).
 
 ## Website images
 ### Home Page
-![Homepage](screenshots/homepage.png)
-![Homepage](screenshots/homepage.png)
-![Search Page](screenshots/homepage.png)
-![Search Page](screenshots/homepage.png)
-![Movie Detail Page](screenshots/homepage.png)
-![Movie Detail Page](screenshots/homepage.png)
+![Homepage](src/Images/Home1.png)
+![Homepage](src/Images/Home2.png)
+![Homepage](src/Images/Home3.png)
+![Search Page](src/Images/Search.png)
+![Movie Detail Page](src/Images/Details1.png)
+![Movie Detail Page](src/Images/Details2.png)
