@@ -42,6 +42,8 @@ You can get the API key used here by visiting (https://www.omdbapi.com/).
 ![Homepage](src/Images/Home1.png)
 ![Homepage](src/Images/Home2.png)
 ![Homepage](src/Images/Home3.png)
+### Search
 ![Search Page](src/Images/Search.png)
+### Details
 ![Movie Detail Page](src/Images/Details1.png)
 ![Movie Detail Page](src/Images/Details2.png)
