@@ -8,21 +8,21 @@ MovieHub is a user-friendly platform designed for movie enthusiasts. Users can s
 
 ## Technologies Used
 
-Frontend: React, React Router<br/>
-Styling: CSS (custom styling with flexbox and grid)<br/>
-API: OMDB API for fetching movie data<br/>
-Font Libraries: Google Fonts (Roboto Slab and Raleway)
+**Frontend**: React, React Router<br/>
+**Styling**: CSS (custom styling with flexbox and grid)<br/>
+**API**: OMDB API for fetching movie data<br/>
+**Font Libraries**: Google Fonts (Roboto Slab and Raleway)
 
 ## Installation and Setup
 
 Clone the repository:<br/>
-`git clone https://github.com/OmKashyap5/MovieLand.git`
+`git clone https://github.com/OmKashyap5/MovieLand.git`<br/>
 Navigate to the project directory:<br/>
-`cd MovieLand`
+`cd MovieLand`<br/>
 Install dependencies:<br/>
-`npm install`
+`npm install`<br/>
 Start the development server:<br/>
-`npm start`
+`npm start`<br/>
 Open your browser and navigate to http://localhost:3000.
 
 ## Usage
@@ -33,10 +33,15 @@ Open your browser and navigate to http://localhost:3000.
 **Movie Details**: Click on a movie to view its details.<br/>
 **Login/Signup**: Manage user authentication.
 
-## Usage
+## **NOTE:**
+Make sure to enter your API key in the files wherever mentioned <enter_your_api_key>.<br/>
+You can get the API key used here by visiting (https://www.omdbapi.com/).
 
-**Homepage**: Access a carousel with popular movies.<br/>
-**Search Movies**: Use the search bar to find movies; results are displayed in a grid format.<br/>
-**Explore Genres**: View movies by genre.<br/>
-**Movie Details**: Click on a movie to view its details.<br/>
-**Login/Signup**: Manage user authentication.
+## Website images
+### Home Page
+![Homepage](screenshots/homepage.png)
+![Homepage](screenshots/homepage.png)
+![Search Page](screenshots/homepage.png)
+![Search Page](screenshots/homepage.png)
+![Movie Detail Page](screenshots/homepage.png)
+![Movie Detail Page](screenshots/homepage.png)
